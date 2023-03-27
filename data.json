@@ -1,0 +1,44 @@
+data = {
+    "projects": [
+        {
+            "id": 1,
+            "title": "Flask simple",
+            "description": "Flask tutorial with simple API Endpoint",
+            "publishedDate": "2023.03.24",
+            "lastUpdatedDate": "2023.03.24",
+            "uris": [
+                {
+                    "name": "github : flask-simple",
+                    "uri": "https://github.com/khhandrea/flask-simple"
+                },
+                {
+                    "name": "docker hub : flask-simple",
+                    "uri": "https://hub.docker.com/repository/docker/khhandrea/flask-simple/general"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Say today",
+            "description": "API Endpoint for 'say today'",
+            "publishedDate": "2023.03.24",
+            "lastUpdatedDate": "2023.03.24",
+            "uris": [
+                {
+                    "name": "github : say-today",
+                    "uri": "https://github.com/khhandrea/say-today"
+                }
+            ]
+        }
+    ],
+    "howAbout": [
+        "- simple CRUD model",
+        "- KU DL from scratch 1 ~ ?",
+        "- KU DL from scratch 2 ~ ?",
+        "- KU DL from scratch 3 ~ ?",
+        "- ML Textbook ~ ?",
+        "- KU data structure ~ ?",
+        "- KU Artifitial intelligence ~ ?",
+        "- news ~ x",
+    ]
+}

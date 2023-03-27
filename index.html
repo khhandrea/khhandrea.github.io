@@ -8,10 +8,7 @@
         body {
             margin: 5% 10%;
         }
-        a:link {
-            color: #8c7ae6;
-        }
-        a:visited {
+        a:link, a:visited {
             color: #8c7ae6;
         }
     </style>
@@ -25,82 +22,14 @@
     </header>
 
     <section>
-        <dl>
-            <article>
-                <br/>
-                <dt>
-                    <strong>1. Flask simple</strong>
-                </dt>
-                <dd>
-                    <strong>description : </strong>
-                    Flask tutorial with simple API Endpoint
-                </dd>
-                <dd>
-                    <strong>published date : </strong>
-                    2023.03.24
-                </dd>
-                <dd>
-                    <strong>last updated date : </strong>
-                    2023.03.24
-                </dd>
-                <dd>
-                    <strong><a href="https://github.com/khhandrea/flask-simple" target="_blank">github : flask-simple</a></strong>
-                </dd>
-                <dd>
-                    <strong><a href="https://hub.docker.com/repository/docker/khhandrea/flask-simple/general" target="_blank">docker hub : flask-simple</a></strong>
-                </dd>
-
-                <br/><hr/>
-            </article>
-
-            <article>
-                <br/>
-                <dt>
-                    <strong>2. Say today</strong>
-                </dt>
-                <dd>
-                    <strong>description : </strong>
-                    API Endpoint of 'say today'
-                </dd>
-                <dd>
-                    <strong>published date : </strong>
-                    2023.03.24
-                </dd>
-                <dd>
-                    <strong>last updated date : </strong>
-                    2023.03.24
-                </dd>
-                <dd>
-                    <strong><a href="https://github.com/khhandrea/say-today" target="_blank">github : say-today</a></strong>
-                </dd>
-
-                <br/><hr/>
-            </article>
-
-            <article>
-                <br/>
-                <dt>
-                    <strong>How about</strong>
-                </dt>
-                <dd> - today's luck ~ firebase</dd>
-                <dd> - today's quote ~ firebase</dd>
-                <dd> - simple CRUD model </dd>
-                <dd> - KU DL from scratch 1 ~ ?</dd>
-                <dd> - KU DL from scratch 2 ~ ?</dd>
-                <dd> - KU DL from scratch 3 ~ ?</dd>
-                <dd> - ML Textbook ~ ?</dd>
-                <dd> - KU data structure ~ ?</dd>
-                <dd> - KU Artifitial intelligence ~ ?</dd>
-                <dd> - news ~ x</dd>
-                <dd> - </dd>
-
-                <br/><hr/>
-            </article>
+        <dl id="articles">
         </dl>
     </section>
 
     <footer>
         © khhandrea@kakao.com
     </footer>
+    <script src="data.json"></script>
+    <script src="index.js"></script>
 </body>
 </html>

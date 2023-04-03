@@ -21,12 +21,16 @@ data = {
             "id": 2,
             "title": "Say today",
             "description": "API Endpoint for 'say today'",
-            "publishedDate": "2023.03.24",
-            "lastUpdatedDate": "2023.03.24",
+            "publishedDate": "2023.04.03",
+            "lastUpdatedDate": "2023.04.03",
             "uris": [
                 {
                     "name": "github : say-today",
                     "uri": "https://github.com/khhandrea/say-today"
+                },
+                {
+                    "name": "docker hub : say-today",
+                    "uri": "https://hub.docker.com/repository/docker/khhandrea/say-today/general"
                 }
             ]
         }

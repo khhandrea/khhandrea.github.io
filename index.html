@@ -1,236 +1,155 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta name=viewport content="width=device-width, initial-scale=1">
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hwanhee Kim - Master's Student in Robotics Program at KAIST">
+  <title>Hwanhee Kim</title>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" type="image/png" href="images/others/profile_icon.png">
-  <title>Tung Luu</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-
-  <!-- Gif toggles -->
-  <script>
-      function gif_start(image, gif) {
-          document.getElementById(image).style.opacity = "1";
-          document.getElementById(gif).style.opacity = "0";
-      }
-
-      function gif_stop(image, gif) {
-          document.getElementById(image).style.opacity = "0";
-          document.getElementById(gif).style.opacity = "1";
-      }
-  </script>
-
-  <!-- Selected publications toggle -->
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script type="text/javascript">
-      function pubs_off_start() {
-          $('.hiddenPubs').hide();
-          var e = document.getElementById('sel_pub_button');
-          e.classList.add("toggled");
-          var e = document.getElementById('all_pub_button');
-          e.classList.remove("toggled");
-      }
-
-      function pubs_off() {
-          $('.hiddenPubs').slideUp();
-          var e = document.getElementById('sel_pub_button');
-          e.classList.add("toggled");
-          var e = document.getElementById('all_pub_button');
-          e.classList.remove("toggled");
-      }
-
-      function pubs_on() {
-          $('.hiddenPubs').slideDown();
-          var e = document.getElementById('all_pub_button');
-          e.classList.add("toggled");
-          var e = document.getElementById('sel_pub_button');
-          e.classList.remove("toggled");
-      };
-  </script>
-
-  <!-- Dynamic generation -->
-  <script src="https://unpkg.com/mustache@latest"></script>
+  <link rel="icon" type="image/jpeg" href="images/others/profile.jpeg">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-  <script type="text/javascript" src="data/js-yaml.min.js"></script>
-  <script type="text/javascript">
-      function renderHello() {
-          var template = document.getElementById('template').innerHTML;
-          $.get("./papers.yaml").done(function (data) {
-              try {
-                  papers = jsyaml.load(data)
-                  var rendered = Handlebars.compile(template)(papers);
-                  document.getElementById('mustache_target').innerHTML = rendered;
-                  pubs_off_start()
-                  console.log("loading papers.yaml done!")
-              } catch (err) {
-                  console.log(err);
-              }
-          });
-      }
-  </script>
+  <script src="data/js-yaml.min.js"></script>
+  <script>
+    function pubsOffStart() {
+      $('.hiddenPubs').hide();
+      document.getElementById('sel_pub_button').classList.add('toggled');
+      document.getElementById('all_pub_button').classList.remove('toggled');
+    }
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    function pubsOff() {
+      $('.hiddenPubs').slideUp();
+      document.getElementById('sel_pub_button').classList.add('toggled');
+      document.getElementById('all_pub_button').classList.remove('toggled');
+    }
+
+    function pubsOn() {
+      $('.hiddenPubs').slideDown();
+      document.getElementById('all_pub_button').classList.add('toggled');
+      document.getElementById('sel_pub_button').classList.remove('toggled');
+    }
+
+    function renderPublications() {
+      var template = document.getElementById('publication-template').innerHTML;
+      $.get('./papers.yaml').done(function(data) {
+        try {
+          var papers = jsyaml.load(data);
+          var rendered = Handlebars.compile(template)(papers);
+          document.getElementById('publication-target').innerHTML = rendered;
+          pubsOffStart();
+        } catch (err) {
+          document.getElementById('publication-target').innerHTML = 'Unable to load publications.';
+          console.log(err);
+        }
+      });
+    }
+
+    function toggleDescription(elementId) {
+      var checkbox = document.getElementById(elementId);
+      var description = document.getElementById('toggleDescription' + elementId);
+      description.style.display = checkbox.checked ? 'block' : 'none';
+    }
+  </script>
 </head>
 
 <body>
-<!-- Dark mode -->
-<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
-<script>
-    var options = {
-        autoMatchOsTheme: false // default: true
-    }
-
-    const darkmode = new Darkmode(options);
-    darkmode.showWidget();
-</script>
-
-<a name="top"></a>
-<!-- body -->
-<div style="max-width:900; width:100%; margin:0 auto">
-  <!-- Intro & photo -->
-  <div class="table-like" style="width:100%; text-align:left;">
-    <div style="flex: 1 0 300px;margin-right:50px">
-      <p align="center">
-        <name>Tung Luu</name>
+<main class="page">
+  <section class="intro table-like">
+    <div class="intro-text">
+      <p class="center">
+        <name>Hwanhee Kim</name>
       </p>
-      <p align="center" style="font-family:'Courier New">
-        tungluu2203 at gmail dot com
+      <p class="center mono">
+        khhandrea at kaist dot ac dot kr
       </p>
 
       <p>
-        Hi! I am a final-year Ph.D. candidate in <a href="https://ee.kaist.ac.kr/en/"> Electrical Engineering</a> at the
-        <a href="https://www.kaist.ac.kr/en"> Korea Advanced Institute of Science and Technology (KAIST)</a>,
-        where I am fortunate to be advised by Prof. <a href="https://sanctusfactory.com/family.php">Chang D. Yoo</a>.
-        I am a member of <a href="https://sanctusfactory.com/u-aim/"> Artificial Intelligence & Machine
-        Learning (U-AIM)</a> Lab.
-        My research focuses on deep reinforcement learning, preference learning, and robot learning.
-        <br>
-        <br>
-        I received my M.S. from Electrical Engineering, KAIST in
-        2020, advised by Prof. Chang D. Yoo.
-        Before coming to KAIST, I received my B.Eng. in <a href="https://seee.hust.edu.vn/en/">Electrical and
-        Electronic
-        Engineering</a> from <a href="https://hust.edu.vn/en/">Hanoi University of Science and Technology (HUST)</a>
-        in 2017, advised by Prof. <a
-              href="https://sites.google.com/set.hust.edu.vn/hust-edabk-lab/our-members/professors?authuser=0">Duc-Minh
-        Nguyen</a>.
-
+        Hello. I am a master's student in the Robotics Program at
+        <a href="https://www.kaist.ac.kr/en/">KAIST</a>, where I am a member of the
+        <a href="https://sanctusfactory.com/u-aim/">Artificial Intelligence & Machine Learning (U-AIM) Lab</a>.
+        My interests lie in reinforcement learning, robotics, and world models, with a focus on building data-efficient
+        decision-making agents that can learn from offline data and feedback signals.
       </p>
-      <p align="center">
-        <a href="https://drive.google.com/file/d/1A3dK5mY5-hW8Q6bnWC-ro13OZSKy_lle/view">CV</a> &nbsp/&nbsp
-        <a href="https://scholar.google.com/citations?user=7N2JQW0AAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
-        <a href="https://github.com/tunglm2203">GitHub</a> &nbsp/&nbsp
-        <a href="https://www.linkedin.com/in/tungluu94">Linkedin</a> &nbsp/&nbsp
-        <a href="mailto:tungluu2203@gmail.com">Email</a>
+      <p>
+        I received my B.S. in Computer Science and Engineering from Konkuk University in 2025.
+      </p>
 
+      <p class="center links">
+        <a href="https://drive.google.com/file/d/1t5_VwR6ZMVMoZc955AIB3dOgf9lMz6CG/view?usp=drive_link">CV</a>
+        &nbsp;/&nbsp;
+        <a href="https://github.com/khhandrea">GitHub</a>
+        &nbsp;/&nbsp;
+        <a href="https://www.linkedin.com/in/hwanhee-kim-345aba36b/">LinkedIn</a>
+        &nbsp;/&nbsp;
+        <a href="https://x.com/gimani02">X</a>
+        &nbsp;/&nbsp;
+        <a href="https://orcid.org/0009-0000-7575-1536">ORCID</a>
+        &nbsp;/&nbsp;
+        <a href="mailto:khhandrea@kaist.ac.kr">Email</a>
       </p>
     </div>
 
     <div class="image-cropper">
-      <img src="images/others/profile_1.jpg" style="width:100%">
+      <img src="images/others/profile.jpeg" alt="Hwanhee Kim" class="profile-photo">
     </div>
-  </div>
+  </section>
 
-  <!-- News -->
-  <div style="width:100%; text-align:left;">
+  <section>
     <heading>News</heading>
-  </div>
+    <ul class="new-list">
+      <li><strong>06/2026</strong>: One paper has been accepted to IROS 2026.</li>
+      <li><strong>05/2026</strong>: One paper has been accepted to ICML 2026 as an <oral>Oral</oral> presentation.</li>
+    </ul>
+  </section>
 
-  <div style="width:100%; text-align:left;margin-top:10;" class="new-list">
-    <li><strong>05/2026</strong>: Two papers have been accepted at ICML 2026 (one selected for an <span style="color:red;">Oral</span> presentation).</li>
-    <li><strong>06/2025</strong>: A paper has been accepted at IROS 2025.</li>
-    <li><strong>05/2025</strong>: A paper has been accepted at ICML 2025.</li>
-    <li><strong>12/2024</strong>: Two papers have been accepted at ICASSP 2025.</li>
-    <li><strong>06/2024</strong>: Two papers have been accepted at IROS 2024.</li>
-  </div>
-
-  <style>
-      .hiddenDesc {
-          display: none;
-      }
-  </style>
-  <script>
-      function toggleDescription(elementId) {
-          var checkbox = document.getElementById(elementId);
-          var descriptionId = "toggleDescription" + elementId;
-          var description = document.getElementById(descriptionId);
-
-          // Check the state of the toggle and show/hide the paragraph accordingly
-          if (checkbox.checked) {
-              description.style.display = "block";  // Show the paragraph when the toggle is on
-          } else {
-              description.style.display = "none";   // Hide the paragraph when the toggle is off
-          }
-      }
-  </script>
-
-  <!-- Research -->
-  <div style="width:100%; text-align:left; margin-top:20; ">
+  <section>
     <heading>Research</heading>
-    <a style="font-size: 17px; color: black;">(</a>
-    <a style="font-size:17px" id='sel_pub_button' href="javascript:pubs_off()">Highlighted</a>
-    <a style="font-size: 17px; color: black;">/</a>
-    <a style="font-size:17px" id='all_pub_button' href="javascript:pubs_on()">All</a>
-    <a style="font-size: 17px; color: black;">)</a>
+    <span class="publication-toggle">(</span>
+    <a id="sel_pub_button" href="javascript:pubsOff()">Highlighted</a>
+    <span class="publication-toggle">/</span>
+    <a id="all_pub_button" href="javascript:pubsOn()">All</a>
+    <span class="publication-toggle">)</span>
     <br>
-    (* indicates equal contribution, <sup><span>&#8224;</span></sup> indicates equal advising)
-  </div>
+    <span class="note">(* indicates equal contribution)</span>
+  </section>
 
-  <div id="mustache_target">Loading...</div>
-  <script id="template" type="text/x-handlebars-template">
+  <div id="publication-target">Loading...</div>
+  <script id="publication-template" type="text/x-handlebars-template">
     {{#papers}}
-    <div style="width:100%;margin-left:0px;margin-right:0px;margin-top:10px; flex-wrap:wrap-reverse; "
-         class="table-like {{#unless highlighted}}hiddenPubs{{/unless}}"
-         onmouseout="gif_stop('{{name}}_image', '{{name}}_gif')"
-         onmouseover="gif_start('{{name}}_image', '{{name}}_gif')">
-      <div class="zero" style="flex: 1 0 270px;margin-top:0px;margin-right:20px;max-width:270px;">
-        <div class="one">
-          {{#unless nogif}}
-          <div class="two" id='{{name}}_image', style="opacity: 0">
-            <img src='images/{{name}}_after.gif' class="paper_img">
-          </div>
-          {{/unless}}
-          {{#if img2}}
-          <div class="two" id='{{name}}_image', style="opacity: 0">
-            <img src='images/{{name}}_after.png' class="paper_img">
-          </div>
-          {{/if}}
-          <img id='{{name}}_gif' src='images/{{name}}_before.png' class="paper_img">
+    <article class="publication table-like {{#unless highlighted}}hiddenPubs{{/unless}}">
+      <div class="zero publication-media">
+        {{#if image}}
+        <img src="{{image}}" alt="{{title.name}}" class="paper_img">
+        {{else}}
+        <div class="paper-placeholder">
+          <span>{{placeholder}}</span>
         </div>
-<!--        {{#unless nogif}}-->
-<!--        <p style="text-align: center;margin-top:0.4em;margin-bottom:0em;color:Gray;"><i> Hover/tap to play the gif</i></p>-->
-<!--        {{/unless}}-->
+        {{/if}}
       </div>
 
-      <div style="flex: 10000 1 400px;margin-bottom:10px;" valign="top">
-        <p class="paper_title" style="margin-top:0em;">{{#if title.link}}<a href={{title.link}}>{{else}}<a>{{/if}}
-          <papertitle>{{title.name}}</papertitle>
-        </a>
-        <br>
-        {{#authors}}
-        {{#if me}}
-        <strong>Tung M. Luu</strong>{{#if star}}*{{/if}}{{#unless @last}}, {{/unless}} {{else}} {{#if href}}
-        <a class="black_link" href={{href}}>{{name}}</a>{{#if star}}*{{/if}}{{#if star2}}<sup>&#8224;</sup>
-        {{/if}}{{#unless @last}}, {{/unless}}
-        {{else}}
-        <a class="black_link">{{name}}</a>{{#if star}}*{{/if}}{{#if star2}}<sup>&#8224;</sup>{{/if}}{{#unless @last}},
-        {{/unless}}
-        {{/if}}
-        {{/if}}
-        {{/authors}}
-
-        <br>
-        <font color="Gray"><i>{{{conference.name}}}</i></font>
-        <br>
-        {{#links}}
-        {{#if href}}
-        <a href={{href}}>{{name}}</a>{{#unless @last}} | {{/unless}}
-        {{else}}
-        <a class="black_link">{{name}}</a>{{#unless @last}} | {{/unless}}
-        {{/if}}
-        {{/links}}
+      <div class="publication-body">
+        <p class="paper_title">
+          {{#if title.link}}<a href="{{title.link}}">{{else}}<a>{{/if}}
+            <papertitle>{{title.name}}</papertitle>
+          </a>
+          <br>
+          {{#authors}}
+            {{#if me}}
+              <strong>Hwanhee Kim</strong>{{#if star}}*{{/if}}{{#unless @last}}, {{/unless}}
+            {{else}}
+              {{#if href}}<a class="black_link" href="{{href}}">{{name}}</a>{{else}}<span>{{name}}</span>{{/if}}{{#if star}}*{{/if}}{{#unless @last}}, {{/unless}}
+            {{/if}}
+          {{/authors}}
+          <br>
+          <span class="venue"><i>{{{conference.name}}}</i></span>
+          {{#if links}}
+          <br>
+          {{#links}}
+            {{#if href}}<a href="{{href}}">{{name}}</a>{{else}}<span>{{name}}</span>{{/if}}{{#unless @last}} | {{/unless}}
+          {{/links}}
+          {{/if}}
         </p>
+        {{#if description}}
         <div class="toggle-container">
           <span class="toggle-other-text">Description</span>
           <label class="toggle">
@@ -240,55 +159,39 @@
           </label>
         </div>
         <div id="toggleDescriptioncheckbox{{name}}" class="hiddenDesc">
-          <p style="margin-bottom:0em;">{{description}}</p>
+          <p class="description">{{description}}</p>
         </div>
+        {{/if}}
       </div>
-    </div>
+    </article>
     {{/papers}}
   </script>
-  <script type="text/javascript">
-      renderHello()
+  <script>
+    renderPublications();
   </script>
 
-  <!-- Service -->
-  <div style="width:100%; text-align:left; margin-top:20;">
-    <heading>Conference Reviewing</heading>
-  </div>
-  <div style="width:100%; text-align:left; margin-top:10;">
-    <li>ICML (2026), ICLR (2025, 2026),
-      ICCV (2025), ECCV (2024),
-      IROS (2024, 2025), ICRA (2022).
-    </li>
-  </div>
+  <section>
+    <heading>Education</heading>
+    <ul>
+      <li><strong>2025 - Present</strong>: M.S. Student, Robotics Program, KAIST</li>
+      <li><strong>2025</strong>: B.S. in Computer Science and Engineering, Konkuk University</li>
+    </ul>
+  </section>
 
-  <div style="width:100%; text-align:left; margin-top:20;">
-      <heading>Teaching Assistance</heading>
-  </div>
-  <div style="width:100%; text-align:left; margin-top:10;">
-    <li>Seongnam - KAIST Next Generation ICT Research Center Reinforcement Learning Course: 2024 Fall</li>
-    <li>Seongnam - KAIST Next Generation ICT Research Center EE Co-op+ Joint Research Program: 2022 Fall, 2023 Spring</li>
-    <li>Statistical Learning Theory: 2019 Fall, 2020 Fall</li>
-    <li>Introduction to Machine Learning: 2020 Spring</li>
-  </div>
+  <section>
+    <heading>Teaching</heading>
+    <ul>
+      <li>KAIST-Hwaseong Science Hub AI Specific Education Program: 2026 Summer, 2026 Spring</li>
+      <li>Electronics Design Lab &lt;AI for Robot Intelligence: Perception, Planning and Control&gt;: 2025 Fall, 2026 Spring</li>
+    </ul>
+  </section>
 
-  <div style="width:100%; text-align:left; margin-top:20;">
-      <heading>Experience</heading>
-  </div>
-  <div style="width:100%; text-align:left; margin-top:10;">
-    <li><strong>2015-2017</strong> Software Engineer at <a href="https://ginno.com">G-Innovations</a></li>
-    <li><strong>2014-2017</strong> Undergradute Researcher at <a href="https://sites.google.com/set.hust.edu.vn/hust-edabk-lab/home?authuser=0">EDABK Lab</a></li>
-  </div>
-
-
-<!--  <br>-->
-<!--  <hr>-->
-<!--  <div style="margin:auto">-->
-<!--    <p align="center">-->
-<!--      Inspired by <a href="https://jonbarron.info/">this</strong></a> and <a-->
-<!--            href="https://www.jessezhang.net/">this</strong></a>.-->
-<!--    </p>-->
-<!--  </div>-->
-</div>
+  <section>
+    <heading>Reviewing</heading>
+    <ul>
+      <li>Conference: ICASSP (2026)</li>
+    </ul>
+  </section>
+</main>
 </body>
-
 </html>

@@ -12,12 +12,8 @@ papers:
         href: 'https://sanctusfactory.com/family.php'
     conference:
       name: 'International Conference on Machine Learning (ICML), 2026 (<oral>Oral, top 0.7%</oral>)'
-    description: >-
-      This work studies feedback-efficient offline preference-based reinforcement learning with video-based optimal
-      transport, aiming to learn useful preference signals from trajectory-level visual information.
     links:
     image: 'images/votp_before.png'
-    highlighted: true
 
   - name: cavm
     title:
@@ -30,9 +26,5 @@ papers:
         href: 'https://sanctusfactory.com/family.php'
     conference:
       name: 'IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2025'
-    description: >-
-      This work explores efficient diffusion-based offline reinforcement learning through compositional average velocity
-      modeling.
     links:
     placeholder: 'IROS 2026'
-    highlighted: true

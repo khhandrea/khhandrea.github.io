@@ -11,24 +11,6 @@
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <script src="data/js-yaml.min.js"></script>
   <script>
-    function pubsOffStart() {
-      $('.hiddenPubs').hide();
-      document.getElementById('sel_pub_button').classList.add('toggled');
-      document.getElementById('all_pub_button').classList.remove('toggled');
-    }
-
-    function pubsOff() {
-      $('.hiddenPubs').slideUp();
-      document.getElementById('sel_pub_button').classList.add('toggled');
-      document.getElementById('all_pub_button').classList.remove('toggled');
-    }
-
-    function pubsOn() {
-      $('.hiddenPubs').slideDown();
-      document.getElementById('all_pub_button').classList.add('toggled');
-      document.getElementById('sel_pub_button').classList.remove('toggled');
-    }
-
     function renderPublications() {
       var template = document.getElementById('publication-template').innerHTML;
       $.get('./papers.yaml').done(function(data) {
@@ -36,18 +18,11 @@
           var papers = jsyaml.load(data);
           var rendered = Handlebars.compile(template)(papers);
           document.getElementById('publication-target').innerHTML = rendered;
-          pubsOffStart();
         } catch (err) {
           document.getElementById('publication-target').innerHTML = 'Unable to load publications.';
           console.log(err);
         }
       });
-    }
-
-    function toggleDescription(elementId) {
-      var checkbox = document.getElementById(elementId);
-      var description = document.getElementById('toggleDescription' + elementId);
-      description.style.display = checkbox.checked ? 'block' : 'none';
     }
   </script>
 </head>
@@ -104,11 +79,6 @@
 
   <section>
     <heading>Research</heading>
-    <span class="publication-toggle">(</span>
-    <a id="sel_pub_button" href="javascript:pubsOff()">Highlighted</a>
-    <span class="publication-toggle">/</span>
-    <a id="all_pub_button" href="javascript:pubsOn()">All</a>
-    <span class="publication-toggle">)</span>
     <br>
     <span class="note">(* indicates equal contribution)</span>
   </section>
@@ -116,7 +86,7 @@
   <div id="publication-target">Loading...</div>
   <script id="publication-template" type="text/x-handlebars-template">
     {{#papers}}
-    <article class="publication table-like {{#unless highlighted}}hiddenPubs{{/unless}}">
+    <article class="publication table-like">
       <div class="zero publication-media">
         {{#if image}}
         <img src="{{image}}" alt="{{title.name}}" class="paper_img">
@@ -149,19 +119,6 @@
           {{/links}}
           {{/if}}
         </p>
-        {{#if description}}
-        <div class="toggle-container">
-          <span class="toggle-other-text">Description</span>
-          <label class="toggle">
-            <input type="checkbox" id="checkbox{{name}}" onchange="toggleDescription('checkbox{{name}}')">
-            <span class="slider"></span>
-            <span class="labels" data-on="On" data-off="Off"></span>
-          </label>
-        </div>
-        <div id="toggleDescriptioncheckbox{{name}}" class="hiddenDesc">
-          <p class="description">{{description}}</p>
-        </div>
-        {{/if}}
       </div>
     </article>
     {{/papers}}

@@ -2,6 +2,7 @@ papers:
   - name: votp
     title:
       name: 'Video-Based Optimal Transport for Feedback-Efficient Offline Preference-Based Reinforcement Learning'
+      link: 'https://arxiv.org/abs/2606.16856v1'
     authors:
       - name: Tung M. Luu
         href: 'https://tunglm2203.github.io/'
@@ -11,8 +12,14 @@ papers:
       - name: Chang D. Yoo
         href: 'https://sanctusfactory.com/family.php'
     conference:
-      name: 'International Conference on Machine Learning (ICML), 2026 (<oral>Oral, top 0.7%</oral>)'
+      name: 'International Conference on Machine Learning (ICML), <i>2026</i> (<highlight>Oral, top 0.7%</highlight>)'
     links:
+      - name: 'paper'
+        href: 'https://arxiv.org/abs/2606.16856v1'
+      - name: 'code'
+        href: 'https://github.com/tunglm2203/votp'
+      - name: 'website'
+        href: 'https://votp2026.github.io/'
     image: 'images/votp_before.png'
 
   - name: cavm
@@ -25,6 +32,6 @@ papers:
       - name: Chang D. Yoo
         href: 'https://sanctusfactory.com/family.php'
     conference:
-      name: 'IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2025'
+      name: 'IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), <i>2025</i>'
     links:
-    placeholder: 'IROS 2026'
+    placeholder: 'IROS <i>2026</i>'

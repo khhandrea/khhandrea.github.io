@@ -39,14 +39,12 @@
       </p>
 
       <p>
-        Hello. I am a master's student in the Robotics Program at
-        <a href="https://www.kaist.ac.kr/en/">KAIST</a>, where I am a member of the
+        I am a master's student in the Robotics Program at Korean Advanced Institute of Science and Technology (KAIST) advised by Prof. <a href="https://sanctusfactory.com/family.php">Chang D. Yoo</a>, and a member of the
         <a href="https://sanctusfactory.com/u-aim/">Artificial Intelligence & Machine Learning (U-AIM) Lab</a>.
-        My interests lie in reinforcement learning, robotics, and world models, with a focus on building data-efficient
-        decision-making agents that can learn from offline data and feedback signals.
+        My research interests lie in reinforcement learning and world models, particularly to build artificial intelligence that thinks like a living creature.
       </p>
       <p>
-        I received my B.S. in Computer Science and Engineering from Konkuk University in 2025.
+        I received my B.S. from Konkuk University (Seoul, South Korea) in the Department of Computer Science and Engineering in <i>2025</i>.
       </p>
 
       <p class="center links">
@@ -56,11 +54,7 @@
         &nbsp;/&nbsp;
         <a href="https://www.linkedin.com/in/hwanhee-kim-345aba36b/">LinkedIn</a>
         &nbsp;/&nbsp;
-        <a href="https://x.com/gimani02">X</a>
-        &nbsp;/&nbsp;
         <a href="https://orcid.org/0009-0000-7575-1536">ORCID</a>
-        &nbsp;/&nbsp;
-        <a href="mailto:khhandrea@kaist.ac.kr">Email</a>
       </p>
     </div>
 
@@ -72,15 +66,15 @@
   <section>
     <heading>News</heading>
     <ul class="new-list">
-      <li><strong>06/2026</strong>: One paper has been accepted to IROS 2026.</li>
-      <li><strong>05/2026</strong>: One paper has been accepted to ICML 2026 as an <oral>Oral</oral> presentation.</li>
+      <li><i>06/2026</i>: One paper has been accepted to <strong>IROS 2026</strong>.</li>
+      <li><i>05/2026</i>: One paper has been accepted to <strong>ICML 2026</strong> as an <highlight>Oral</highlight> presentation.</li>
     </ul>
   </section>
 
   <section>
     <heading>Research</heading>
     <br>
-    <span class="note">(* indicates equal contribution)</span>
+    <!-- <span class="note">(* indicates equal contribution)</span> -->
   </section>
 
   <div id="publication-target">Loading...</div>
@@ -92,7 +86,7 @@
         <img src="{{image}}" alt="{{title.name}}" class="paper_img">
         {{else}}
         <div class="paper-placeholder">
-          <span>{{placeholder}}</span>
+          <span>{{{placeholder}}}</span>
         </div>
         {{/if}}
       </div>
@@ -107,7 +101,7 @@
             {{#if me}}
               <strong>Hwanhee Kim</strong>{{#if star}}*{{/if}}{{#unless @last}}, {{/unless}}
             {{else}}
-              {{#if href}}<a class="black_link" href="{{href}}">{{name}}</a>{{else}}<span>{{name}}</span>{{/if}}{{#if star}}*{{/if}}{{#unless @last}}, {{/unless}}
+              <span>{{name}}</span>{{#if star}}*{{/if}}{{#unless @last}}, {{/unless}}
             {{/if}}
           {{/authors}}
           <br>
@@ -128,25 +122,37 @@
   </script>
 
   <section>
+    <heading>Projects</heading>
+    <ul class="project-list">
+      <li>
+        <strong>Intelligent Robotic System using Continual Learning and Multimodal Language Model based Multi Attribute Feedback (Operator)</strong>
+        <p class="project-funding">
+          National Research Foundation of Korea (NRF) grant funded by the Korea government (MSIT): <i>Aug. 2025 - present</i>
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <section>
     <heading>Education</heading>
     <ul>
-      <li><strong>2025 - Present</strong>: M.S. Student, Robotics Program, KAIST</li>
-      <li><strong>2025</strong>: B.S. in Computer Science and Engineering, Konkuk University</li>
+      <li><strong>M.S. Student</strong>, Robotics Program, KAIST, <i>2025 - Present</i></li>
+      <li><strong>B.S.</strong>, Computer Science and Engineering, Konkuk University, GPA: 4.20/4.5 (Top 3%), <i>2021 - 2025</i></li>
     </ul>
   </section>
 
   <section>
     <heading>Teaching</heading>
     <ul>
-      <li>KAIST-Hwaseong Science Hub AI Specific Education Program: 2026 Summer, 2026 Spring</li>
-      <li>Electronics Design Lab &lt;AI for Robot Intelligence: Perception, Planning and Control&gt;: 2025 Fall, 2026 Spring</li>
+      <li><strong>KAIST-Hwaseong Science Hub AI Specific Education Program</strong>: <i>2026 Summer</i>, <i>2026 Spring</i></li>
+      <li><strong>Electronics Design Lab &lt;AI for Robot Intelligence: Perception, Planning and Control&gt;</strong>: <i>2025 Fall</i>, <i>2026 Spring</i></li>
     </ul>
   </section>
 
   <section>
     <heading>Reviewing</heading>
     <ul>
-      <li>Conference: ICASSP (2026)</li>
+      <li><strong>International Conference on Acoustics, Speech & Signal Processing (ICASSP)</strong>: <i>2025</i></li>
     </ul>
   </section>
 </main>

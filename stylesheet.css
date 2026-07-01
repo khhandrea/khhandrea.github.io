@@ -1,26 +1,33 @@
 /* Color scheme stolen from https://www.seas.upenn.edu/~oleh/ */
+:root {
+  --link-color: rgb(92, 129, 97);
+  --highlight-color: rgb(211, 84, 0);
+  --paper-thumbnail-width: 270px;
+  --paper-thumbnail-height: 135px;
+}
+
 a {
-  color: #1772d0;
-  text-decoration: none;
+  color: var(--link-color);
+  text-decoration: underline;
+  font-weight: 700;
 }
 
 .black_link {
   color: Black;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:focus,
 a:hover {
-  color: #a723d3;
-  text-decoration: none;
+  color: var(--link-color);
+  text-decoration: underline;
 }
 
 body,
 td,
 th,
 tr,
-p,
-a {
+p {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   /* font-family: 'Titillium Web', Verdana, Helvetica, sans-serif; */
   font-size: 14px;
@@ -37,9 +44,9 @@ body {
   background: #fff;
 }
 
-oral {
+highlight {
   font-weight: bold;
-  color: red;
+  color: var(--highlight-color);
 }
 
 heading {
@@ -104,16 +111,16 @@ section {
 }
 
 .one {
-  width: 270px;
-  height: 180px;
+  width: var(--paper-thumbnail-width);
+  height: var(--paper-thumbnail-height);
   position: relative;
   display: table-cell;
   vertical-align: middle;
 }
 
 .two {
-  width: 270px;
-  height: 180px;
+  width: var(--paper-thumbnail-width);
+  height: var(--paper-thumbnail-height);
   position: absolute;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
@@ -121,11 +128,12 @@ section {
 }
 
 .paper_img {
-  width: 270px;
-  height: 180px;
+  width: var(--paper-thumbnail-width);
+  height: var(--paper-thumbnail-height);
   max-width: 100%;
   object-fit: cover;
   border: 1px solid #eee;
+  border-radius: 0;
 }
 
 /* @media only screen and (max-width: 590px) {
@@ -140,7 +148,8 @@ section {
 }
 
 span.highlight {
-  background-color: #ffffd0;
+  font-weight: bold;
+  color: var(--highlight-color);
 }
 
 img {
@@ -300,6 +309,15 @@ b {
   line-height: 1.7;
 }
 
+.project-list {
+  line-height: 1.55;
+}
+
+.project-funding {
+  margin: 8px 0 0;
+  color: #444;
+}
+
 .publication {
   width: 100%;
   margin: 14px 0 0;
@@ -307,8 +325,8 @@ b {
 }
 
 .publication-media {
-  flex: 1 0 270px;
-  max-width: 270px;
+  flex: 1 0 var(--paper-thumbnail-width);
+  max-width: var(--paper-thumbnail-width);
   margin: 0 20px 0 0;
 }
 
@@ -327,13 +345,13 @@ b {
 }
 
 .paper-placeholder {
-  width: 270px;
-  height: 180px;
+  width: var(--paper-thumbnail-width);
+  height: var(--paper-thumbnail-height);
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #d9e1ea;
-  border-radius: 15px;
+  border-radius: 0;
   background: linear-gradient(135deg, #f4f7fa 0%, #e8eef5 100%);
   color: #51616f;
   font-weight: 700;

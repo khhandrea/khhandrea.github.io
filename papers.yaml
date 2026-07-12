@@ -2,7 +2,7 @@ papers:
   - name: votp
     title:
       name: 'Video-Based Optimal Transport for Feedback-Efficient Offline Preference-Based Reinforcement Learning'
-      link: 'https://arxiv.org/abs/2606.16856v1'
+      link: 'https://votp2026.github.io/'
     authors:
       - name: Tung M. Luu
         href: 'https://tunglm2203.github.io/'
@@ -21,8 +21,7 @@ papers:
       - name: 'website'
         href: 'https://votp2026.github.io/'
     image: 'images/votp_before.png'
-
-  - name: cavm
+  - name: insql
     title:
       name: 'Compositional Average Velocity Modeling for Efficient Diffusion Offline Reinforcement Learning'
     authors:
@@ -32,6 +31,6 @@ papers:
       - name: Chang D. Yoo
         href: 'https://sanctusfactory.com/family.php'
     conference:
-      name: 'IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), <i>2025</i>'
+      name: 'IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), <i>2026</i>'
     links:
-    placeholder: 'IROS <i>2026</i>'
+    image: 'images/insql_before.png'

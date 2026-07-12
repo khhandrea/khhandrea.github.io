@@ -52,6 +52,8 @@
       <p class="center links">
         <a href="https://drive.google.com/file/d/1zxfqVWk_rDz24uX41EQn2lCyK9LG3kyN/view?usp=sharing">CV</a>
         &nbsp;/&nbsp;
+        <a href="https://scholar.google.com/citations?user=pl9FQTcAAAAJ&hl=ko">Google Scholar</a>
+        &nbsp;/&nbsp;
         <a href="https://github.com/khhandrea">GitHub</a>
         &nbsp;/&nbsp;
         <a href="https://www.linkedin.com/in/hwanhee-kim-345aba36b/">LinkedIn</a>
@@ -85,7 +87,9 @@
     <article class="publication table-like">
       <div class="zero publication-media">
         {{#if image}}
-        <img src="{{image}}" alt="{{title.name}}" class="paper_img">
+          {{#if title.link}}<a href="{{title.link}}" class="publication-image-link">{{/if}}
+            <img src="{{image}}" alt="{{title.name}}" class="paper_img">
+          {{#if title.link}}</a>{{/if}}
         {{else}}
         <div class="paper-placeholder">
           <span>{{{placeholder}}}</span>
@@ -95,9 +99,13 @@
 
       <div class="publication-body">
         <p class="paper_title">
-          {{#if title.link}}<a href="{{title.link}}">{{else}}<a>{{/if}}
+          {{#if title.link}}
+          <a href="{{title.link}}">
             <papertitle>{{title.name}}</papertitle>
           </a>
+          {{else}}
+          <papertitle>{{title.name}}</papertitle>
+          {{/if}}
           <br>
           {{#authors}}
             {{#if me}}

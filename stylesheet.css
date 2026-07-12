@@ -1,6 +1,7 @@
 /* Color scheme stolen from https://www.seas.upenn.edu/~oleh/ */
 :root {
   --link-color: rgb(92, 129, 97);
+  --link-hover-color: rgb(211, 84, 0);
   --highlight-color: rgb(211, 84, 0);
   --paper-thumbnail-width: 270px;
   --paper-thumbnail-height: 135px;
@@ -8,18 +9,22 @@
 
 a {
   color: var(--link-color);
-  text-decoration: underline;
+  text-decoration: none;
   font-weight: 700;
 }
 
 .black_link {
   color: Black;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
-a:focus,
-a:hover {
+a:focus {
   color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
   text-decoration: underline;
 }
 
@@ -328,6 +333,11 @@ b {
   flex: 1 0 var(--paper-thumbnail-width);
   max-width: var(--paper-thumbnail-width);
   margin: 0 20px 0 0;
+}
+
+.publication-image-link {
+  display: block;
+  line-height: 0;
 }
 
 .publication-body {

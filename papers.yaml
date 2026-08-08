@@ -15,7 +15,7 @@ papers:
       name: 'Sensors, Vol. 26, No. 16, Article 5046, <i>2026</i>'
     links:
       - name: 'paper'
-        href: 'https://www.mdpi.com/1424-8220/26/16/5046/pdf'
+        href: 'https://www.mdpi.com/1424-8220/26/16/5046'
     image: 'images/alva_overview.png'
 
   - name: votp

@@ -1,4 +1,23 @@
 papers:
+  - name: alva
+    title:
+      name: 'Action- and Language-Conditioned Video Assessment for Embodied Control'
+      link: 'https://www.mdpi.com/1424-8220/26/16/5046'
+    authors:
+      - me: true
+      - name: Jaehyun Jang
+      - name: Seungmin Cha
+      - name: Hyeonseo Yun
+      - name: Donghoon Lee
+      - name: Chang D. Yoo
+        href: 'https://sanctusfactory.com/family.php'
+    conference:
+      name: 'Sensors, Vol. 26, No. 16, Article 5046, <i>2026</i>'
+    links:
+      - name: 'paper'
+        href: 'https://www.mdpi.com/1424-8220/26/16/5046/pdf'
+    image: 'images/alva_overview.png'
+
   - name: votp
     title:
       name: 'Video-Based Optimal Transport for Feedback-Efficient Offline Preference-Based Reinforcement Learning'

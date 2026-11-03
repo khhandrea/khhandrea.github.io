@@ -1,4 +1,23 @@
 papers:
+  - name: humanoid_soccer
+    title:
+      name: 'Locomotion-Grounded Humanoid Soccer: Task-Gated Reinforcement Learning of a Multi-Directional Kicking Library'
+      link: 'https://arxiv.org/abs/2609.38852'
+    authors:
+      - name: Abu Hanif Muhammad Syarubany
+      - name: Jaehyun Jang
+      - me: true
+      - name: Kyuwon Kim
+      - name: Seungyeon Ryu
+      - name: Chang D. Yoo
+        href: 'https://sanctusfactory.com/family.php'
+    conference:
+      name: 'arXiv preprint'
+    links:
+      - name: 'paper'
+        href: 'https://arxiv.org/abs/2609.38852'
+    image: 'images/humanoid_soccer_before.png'
+
   - name: alva
     title:
       name: 'Action- and Language-Conditioned Video Assessment for Embodied Control'

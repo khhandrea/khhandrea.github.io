@@ -62,6 +62,7 @@ papers:
   - name: insql
     title:
       name: 'Compositional Average Velocity Modeling for Efficient Diffusion Offline Reinforcement Learning'
+      link: 'https://arxiv.org/abs/2610.14941'
     authors:
       - name: Thanh Nguyen
       - name: Abu Hanif
@@ -71,4 +72,6 @@ papers:
     conference:
       name: 'IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), <i>2026</i>'
     links:
-    image: 'images/insql_before.png'
+      - name: 'paper'
+        href: 'https://arxiv.org/abs/2610.14941'
+    image: 'images/insql_before_v2.png'

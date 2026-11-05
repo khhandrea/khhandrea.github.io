@@ -21,7 +21,7 @@ papers:
   - name: alva
     title:
       name: 'Action- and Language-Conditioned Video Assessment for Embodied Control'
-      link: 'https://www.mdpi.com/1424-8220/26/16/5046'
+      link: 'https://arxiv.org/abs/2608.08273'  # original: https://www.mdpi.com/1424-8220/26/16/5046
     authors:
       - me: true
       - name: Jaehyun Jang
@@ -34,7 +34,7 @@ papers:
       name: 'Sensors, Vol. 26, No. 16, Article 5046, <i>2026</i>'
     links:
       - name: 'paper'
-        href: 'https://arxiv.org/abs/2608.08273'
+        href: 'https://arxiv.org/abs/2608.08273'  # original: https://www.mdpi.com/1424-8220/26/16/5046
     image: 'images/alva_overview.png'
 
   - name: votp

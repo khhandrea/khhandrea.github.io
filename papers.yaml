@@ -74,4 +74,6 @@ papers:
     links:
       - name: 'paper'
         href: 'https://arxiv.org/abs/2610.14941'
+      - name: 'website'
+        href: 'https://thanhkaist.github.io/insqlpage/'
     image: 'images/insql_before_v2.png'
